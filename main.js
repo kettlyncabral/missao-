@@ -47,3 +47,15 @@ const perguntas = [
         ]
     }
 ];
+
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = ""
+
+function mostraPerguntar (){
+    if (atual >= perguntas.length){
+        mostraPerguntar();
+        return;
+    }
+    perguntaAtual = perguntas [atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado
